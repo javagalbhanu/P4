@@ -1,5 +1,12 @@
-<suite name="Suite">
-  <test name="Test">
+<suite name="Suite" parallel="tests">
+  <test name="TestChrome">
+    <parameter name="node" value="http://localhost:4444/wd/hub"/>
+   <parameter name="browser" value="chrome"/>
+  	<groups>
+  		<run>
+  			<include name="smoke"/>	
+  		</run>
+  	</groups>
       <packages>
          <package name="script"/>
        </packages>
